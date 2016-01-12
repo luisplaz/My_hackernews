@@ -1,0 +1,12 @@
+<h1 class="center"> ALL THE POSTS </h1>
+
+<div class="container">
+  <ul class="center">
+    <% @posts.each do |post| %>
+      <li class="no-decoration list">
+        <a class="inline" href='/posts/<%= post.id %>'><%= post.title %></a>
+        <p class="post-info inline">by <%= post.user.name %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

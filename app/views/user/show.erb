@@ -1,0 +1,31 @@
+<h1 class="center"> <%= @user.name %> </h1>
+<div class="user-info container">
+  <div>
+    <h3 class="center title"> My Posts </h3>
+    <ul class="center">
+      <% if @user.posts.length != 0 %>
+        <% @user.posts.each do |post| %>
+          <li class="no-decoration list"><a href='/posts/<%= post.id %>'><%= post.title %> </a></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="center title"> My Comments </h3>
+    <ul class="center">
+     <% if @user.comments.length != 0 %>
+      <% @user.comments.each do |comment| %>
+        <div>
+        <li class="no-decoration"><%= comment.body %> <br> <%= comment.created_at %></li>
+        <form class="inline comment" action="/comments/<%= comment.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input  class="button" type="submit" value="Delete Comment">
+        </form>
+        <div>
+      <% end %>
+     <% end %>
+   </ul>
+ </div>
+
+</div>

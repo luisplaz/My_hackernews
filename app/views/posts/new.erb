@@ -1,0 +1,22 @@
+<h1 class="center"> New Post </h1>
+<div class="post-create container">
+  <div class="center">
+    <% if @new_post_errors %>
+    <ul class="center error no-decoration">
+      <% @new_post_errors.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end  %>
+    <form class="center" method="POST" action="/posts/new">
+      <input type="hidden" name="post[user_id]" value="<%= session[:user_id] %>">
+      <label for="post-title">Title</label>
+      <input class="post-input" type="text" name="post[title]" id="post-title">
+      <label for="post-body">Body</label>
+      <input class="post-input post-body" type="text" name="post[body]" id="post-body">
+      <label for="post-url">Url</label>
+      <input class="post-input" type="url" name="post[url]" id="post-url" value="http://">
+      <input class="button" type="submit" value="Create Post">
+    </form>
+  </div>
+</div>

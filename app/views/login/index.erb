@@ -1,0 +1,45 @@
+<div class="login-form  login-container">
+  <h1 class="center line"> Login </h1>
+
+  <div>
+    <form class="center" method="POST" action="/login">
+      <label for="user-name">User</label>
+      <input type="text" name="user[name]" id="user-name" value="<%= @user.name %>">
+      <label for="user-password">Password</label>
+      <input type="password" name="user[password]" id="user-password">
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <% if @login_errors %>
+  <ul>
+    <% @login_errors.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end  %>
+
+</div>
+
+<div class="sign-up-form login-container">
+  <h1 class="center line"> Sign Up </h1>
+
+  <div>
+    <form class="center" method="POST" action="/user/new">
+      <label for="user-name">User</label>
+      <input type="text" name="user[name]" id="user-name">
+      <label for="user-password">Password</label>
+      <input type="password" name="user[password]" id="user-password">
+      <input type="submit" value="Create">
+    </form>
+  </div>
+
+  <% if @sign_up_errors %>
+  <ul>
+    <% @sign_up_errors.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end  %>
+
+</div>

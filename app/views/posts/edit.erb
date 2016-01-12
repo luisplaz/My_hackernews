@@ -1,0 +1,13 @@
+<div class="center">
+  <form class="center" method="POST" action="/posts/<%= @post.id %>">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="post-title">Title</label>
+    <input class="post-input" type="text" name="post[title]" id="post-title"
+    value="<%= @post.title %>">
+    <label for="post-body">Body</label>
+    <input class="post-input post-body" type="text" name="post[body]" id="post-body" value="<%= @post.body %>">
+    <label for="post-url">Url</label>
+    <input class="post-input" type="url" name="post[url]" id="post-url" value="<%= @post.url %>">
+    <input class="button" type="submit" value="Edit Post">
+  </form>
+</div>
