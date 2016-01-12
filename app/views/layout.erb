@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+  <title>THE POST FORUM</title>
+</head>
+
+<div class="login nav-bar">
+
+  <a class="nav-options no-decoration" href="/">Home</a> |
+
+  <% if logged_in? %>
+    <a class="nav-options no-decoration" href="/posts/new">Create A Post</a> |
+    <a class="nav-options no-decoration" href="/user/<%= session[:user_id] %>"><%= current_user.name %></a> |
+    <a class="nav-options no-decoration" href="/logout">Logout</a>
+  <% else %>
+    <a class="nav-options no-decoration" href="/login">Login/Sign Up!</a>
+  <% end %>
+
+</div>
+
+<body>
+  <%= yield %>
+</body>
+</html>

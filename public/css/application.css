@@ -1,0 +1,180 @@
+html {
+  font-family: 'Oswald', sans-serif;
+  background: url(http://www.amandaabrahamphotography.com/wp-content/uploads/2013/09/museum-of-modern-free-stretch-blog-background.jpg);
+  background-repeat: none;
+
+}
+
+.title {
+  font-size: 20px;
+  color:blue;
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.login-container{
+  margin: 20px auto;
+  width: 600px;
+  padding: 20px;
+}
+
+.center {
+  margin: 20px auto;
+  text-align: center;
+  padding: 0;
+}
+
+.no-decoration {
+  text-decoration: none;
+  list-style: none;
+}
+
+.list {
+  padding-bottom: 20px
+}
+
+.comment {
+  text-decoration: none;
+  list-style: none;
+  padding: 20px;
+  border-bottom: 1px dashed black;
+}
+
+.nav-bar {
+  margin: 20px auto;
+  padding: 0px 20px 20px 20px;
+  width: 640px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.nav-options {
+  margin: 20px auto;
+  width: 600px;
+  color:black;
+}
+
+.line {
+ border-bottom: 1px dashed black;
+}
+
+.edit {
+  color:red;
+  text-decoration: none;
+}
+
+.button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #9fb4f2;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #9fb4f2;
+  box-shadow:inset 0px 1px 0px 0px #9fb4f2;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+  background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+  background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+  background-color:#7892c2;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #4e6096;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #283966;
+  margin:20px;
+}
+
+.button:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+  background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+  background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+  background-color:#476e9e;
+}
+
+.button:active {
+  position:relative;
+  top:1px;
+}
+
+.post-input {
+display:block;
+text-align: center;
+margin:0 auto;
+width: 500px;
+}
+
+.post-body {
+  height:350px;
+}
+
+.error {
+  color:red;
+  font-style: bold;
+}
+
+.inline {
+  display:inline;
+}
+
+.post-info {
+  font-size: 12px;
+}
+
+.plus-button {
+  -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+  -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+  background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+  background-color:#77b55a;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  border:1px solid #4b8f29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:13px;
+  font-weight:bold;
+  padding:6px 12px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #5b8a3c;
+}
+
+.plus:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+  background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+  background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+  background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+  background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+  background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+  background-color:#72b352;
+}
+
+.plus:active {
+  position:relative;
+  top:1px;
+}

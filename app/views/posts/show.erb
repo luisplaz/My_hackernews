@@ -1,0 +1,52 @@
+<h1 class="center"> <%= @post.title %> </h1>
+<div class="post-list container">
+  <div>
+    <ul class="center">
+      <li class="no-decoration list"><p class="title">BODY</p> <%= @post.body %></li>
+      <li class="no-decoration list"><p class="title">URL</p> <%= @post.url %></li>
+      <li class="no-decoration list"><p class="title">CREATED AT</p> <%= @post.created_at %></li>
+    </ul>
+  </div>
+
+  <div class="center">
+    <% if logged_in? %>
+      <% if session[:user_id] != @post.user.id %>
+        <div class="votes">
+          <form class="center" id="upvote" method="POST" action="/posts/<%= @post.id %>/upvote">
+            <input class="plus" type="submit" value="upvote">
+          </form>
+            <h1 id="vote_count"><%=@post.post_votes.count %> </h1>
+          <form class="center" id="downvote" method="POST" action="/posts/<%= @post.id %>/downvote">
+            <input class="plus"  type="submit" value="downvote">
+          </form>
+        </div>
+        <form class="center" method="POST" action="/comments/new">
+          <input type="hidden" name="comment[post_id]" value="<%= @post.id %>">
+          <input type="hidden" name="comment[user_id]" value="<%= session[:user_id] %>">
+          <label for="comment-body">Comment</label>
+          <input type="text" name="comment[body]" id="comment-body">
+          <input class="button" type="submit" value="Submit Comment">
+        </form>
+      <% else %>
+        <div>
+          <a class="edit button inline" href="/posts/<%= @post.id %>/edit">Edit Post</a>
+          <form class="inline" action="/posts/<%= @post.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input  class="button" type="submit" value="Delete Post">
+          </form>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <ul class="center">
+      <% if @post.comments.length != 0 %>
+      <% @post.comments.each do |comment| %>
+      <li class="comment"><%= comment.body %> <br> by <%= comment.user.name %>  <br> <%= comment.created_at %></li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
